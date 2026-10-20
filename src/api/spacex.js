@@ -1,6 +1,6 @@
 class SpaceX{
 
-    constructor(baseUrl = "https://api.spacexdata.com/v4/") {
+    constructor(baseUrl = "https://ll.thespacedevs.com/2.3.0/") {
         this.baseUrl = baseUrl;
     }
     launches(){
@@ -8,11 +8,11 @@ class SpaceX{
             .then(response=>response.json())
     }
     launchpads(){
-        return fetch(`${this.baseUrl}launchpads`)
+        return fetch(`${this.baseUrl}pads`)
             .then(response=>response.json())
     }
     launchpad(id){
-        return fetch(`${this.baseUrl}launchpads/${id}`)
+        return fetch(`${this.baseUrl}pads/${id}`)
             .then(response=>response.json())
 
     }
